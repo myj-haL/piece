@@ -1,0 +1,145 @@
+.container {
+  position: fixed;
+  right: -100%;
+  top: 0;
+  width: 100%;
+  bottom: 0;
+  background-color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  transition: all .2s ease-in-out;
+  z-index: 20;
+  height: 100vh;
+
+  &.none {
+    right: -100%;
+  }
+
+  &.open {
+    right: 0;
+    display: block;
+    transition: all .2s ease-in-out;
+  }
+
+  .gnb_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 18px;
+  }
+ 
+  .right_btn {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .gnb_body {
+    padding: 16px 20px ;
+    box-sizing: border-box;
+    height: calc(100% - 64px - 132px - 120px);
+  }
+
+  .menu_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 28px;
+    align-items: stretch;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .depth_1 {
+    font-weight: 600;
+    font-size: 18px;
+    color: #292A2E;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .inner_menu_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 8px;
+    display: grid;
+    font-size: 14px;
+    font-weight: 400;
+    color: #4A4D55;
+  }
+
+  .gnb_foot {
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .gnb_foot::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 20px;
+    height: 1px;
+    background-color: #F2F3F4;
+  }
+
+  .user_touch {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .consulting, .download {
+    border-radius: 100px;
+    padding: 9px 16px;
+    border: 1px solid #EAECF0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #292A2E;
+  }
+
+  .consulting:hover {
+    background-color: rgba(19, 19, 19, 0.04);
+  }
+
+  .download:hover {
+    background-color:rgba(19, 19, 19, 0.8);
+  }
+
+  .download {
+    color: #fff;
+    background-color: #131313;
+  }
+
+  .language {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .global {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+  }
+
+  .korean, .english {
+    color: #B8BCC8;
+    font-size: 14px;
+    font-weight: 600;
+
+    &.active {
+      color: #292A2E;
+    }
+  }
+
+  @media screen and (min-width:769px) {
+    max-width: 360px;
+  }
+}

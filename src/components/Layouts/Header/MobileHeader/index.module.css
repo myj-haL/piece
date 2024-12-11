@@ -1,0 +1,45 @@
+.container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  background-color: rgb(255, 255, 255, 0.8);
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(20px);
+
+  .logo {
+    .logo_img {
+      width: 108px;
+      height: 32px;
+      object-fit: cover;
+    }
+  }
+
+  .right_btns {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .search, .hamburger, .close {
+    width: 24px;
+    height: 24px;
+  }
+
+}
+
+.container.open::before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(19, 19, 19, 0.6);
+  backdrop-filter: blur(20px);
+}
