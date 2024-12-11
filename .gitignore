@@ -79,5 +79,3 @@ redux-devtools-extension/
 
 # ESLint cache (if using ESLint)
 .eslintcache
-
-.env.development
